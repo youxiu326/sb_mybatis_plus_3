@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-08-20
  */
 @RestController
-@RequestMapping("/tbl_user/tbl-user")
+@RequestMapping("/user/tbl-user")
 public class TblUserController {
 
 }
