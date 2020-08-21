@@ -1,9 +1,13 @@
 package com.huarui.mybatisplus;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.huarui.mybatisplus.entity.TblUser;
 import com.huarui.mybatisplus.service.ITblUserService;
+import com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -74,5 +78,25 @@ class SbMybatisPlus3ApplicationTests {
 
     }
 
+    /**
+     * 分页查询
+     * <p>
+     * ==>    SELECT id,name,email,age,deleteFlag FROM tbl_user LIMIT ?,?
+     *
+     * ==>    Parameters: 0(Long), 2(Long)
+     * </p>
+     */
+    @Test
+    public void testPage(){
+
+        QueryWrapper<TblUser> qw = new QueryWrapper();
+
+        Long pageNum = 0L;
+        Long pageSize = 2L;
+
+        Page<TblUser> page = userService.page(new Page<>(pageNum, pageSize), qw);
+        System.out.println(page);
+
+    }
 
 }
