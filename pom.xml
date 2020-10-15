@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>com.huarui.mybatisplus</groupId>
-    <artifactId>sb_mybatis_plus3</artifactId>
+    <artifactId>sb_mybatis_plus_3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sb_mybatis_plus3</name>
+    <name>sb_mybatis_plus_3</name>
 
-    <description>mybatis3</description>
+    <description>mybatis_3</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author youxiu326
- * @since 2020-08-20
+ * @since 2020-10-15
  */
 @RestController
-@RequestMapping("/user/tbl-user")
+@RequestMapping("//tbl-user")
 public class TblUserController {
 
 }
